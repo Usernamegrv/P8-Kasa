@@ -4,6 +4,8 @@ import Banner from './components/banner/Banner.jsx';
 import './App.scss';
 import GalleryAppartement from './components/GalleryAppartement/GalleryAppartement.jsx';
 import Container from './components/container/Container.jsx';
+import Footer from './components/footer/Footer.jsx';
+
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
       <Banner/>
       <GalleryAppartement/>
       </Container>
+      <Footer/>
 
     </div>
   )

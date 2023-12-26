@@ -9,6 +9,8 @@ function GalleryAppartement() {
         <Appartement/>
         <Appartement/>
         <Appartement/>
+        <Appartement/>
+        <Appartement/>
     </div>
   )
 }
