@@ -3,8 +3,15 @@
     gap: 50px;
     align-items: center;
     padding: 45px 50px 20px 50px;
-    color: #ff6060;
     font-weight: 500;
+
+    a {
+        text-decoration: none;
+        color: #ff6060;
+        &:hover {
+            font-weight: bolder;
+        }
+    }
 
     .navbar_logo {
         margin-right: auto;

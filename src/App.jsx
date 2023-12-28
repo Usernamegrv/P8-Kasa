@@ -1,24 +1,31 @@
-import React from 'react';
-import Navbar from './components/navbar/Navbar.jsx';
-import Banner from './components/banner/Banner.jsx';
+import {HashRouter,
+Route, Routes
+} from "react-router-dom";
+import Header from './components/header/Header.jsx';
 import './App.scss';
-import GalleryAppartement from './components/GalleryAppartement/GalleryAppartement.jsx';
-import Container from './components/container/Container.jsx';
 import Footer from './components/footer/Footer.jsx';
+import Home from './pages/home/Home';
+import Error from './pages/error/Error';
+import Apropos from './pages/apropos/Apropos'
+
+
+
 
 
 function App() {
+  
   return (
     
-    <div>
-      <Navbar/>
-      <Container> 
-      <Banner/>
-      <GalleryAppartement/>
-      </Container>
+   <HashRouter>
+      <Header/>
+        <Routes>
+      <Route path="/Home" element= {<Home/>} />
+      <Route path="*" element= {<Error/>} />
+      <Route path="/Apropos" element= {<Apropos/>} />
+      </Routes> 
       <Footer/>
-
-    </div>
+    </HashRouter>
+    
   )
 }
 
