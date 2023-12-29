@@ -9,7 +9,7 @@
   max-height: 223px;
   border-radius: 25px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   filter: brightness(80%);
 }
 .banner p {
@@ -21,4 +21,5 @@
   top: -188px;
   width: 50%;
   color: white;
-}/*# sourceMappingURL=Banner.css.map */
+}
+/* # sourceMappingURL=Banner.css.map */

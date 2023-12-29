@@ -1,0 +1,66 @@
+@import "../../scss/variables.scss";
+
+.logement-page {
+    color: $couleur-primaire;
+    img {
+        border-radius: 25px;
+        height: 415px;
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+    .logement-entete {
+        border: 3px solid red;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        h1 {
+            font-weight: 500;
+            margin: 0;
+        }
+        h2 {
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        h3 {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+            align-items: flex-end;
+            justify-content: center;
+            font-weight: 500;
+        }
+        .logement-tags {
+            display: flex;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            span {
+                background-color: $couleur-primaire;
+                color: $couleur-tertiaire;
+                padding: 2px 30px;
+                border-radius: 10px;
+                text-align: center;
+            }
+        }
+        .logement-owner-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+            .logement-owner {
+                display: flex;
+                gap: 10px;
+                .logement-owner-badge {
+                    height: 64px;
+                    width: 64px;
+                    border-radius: 50%;
+                    background: $linear-gradient-card;
+                }
+            }
+        }
+    }
+}

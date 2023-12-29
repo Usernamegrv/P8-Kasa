@@ -1,4 +1,3 @@
-import React from 'react';
 import './GalleryAppartement.scss';
 import Appartement from '../Appartements/Appartement.jsx';
 

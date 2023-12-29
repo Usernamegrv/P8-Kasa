@@ -1,7 +1,7 @@
 
-import Banner from '../../components/banner/Banner.jsx';
+import Banner from '../../layout/banner/Banner.jsx';
 import GalleryAppartement from '../../components/galleryAppartement/GalleryAppartement.jsx';
-import Container from '../../components/container/Container.jsx';
+import Container from '../../layout/container/Container.jsx';
 
 function Home() {
   return (
