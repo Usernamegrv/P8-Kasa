@@ -1,15 +1,16 @@
 import './GalleryAppartement.scss';
-import Appartement from '../Appartements/Appartement.jsx';
+import AppartementCard from '../appartementCard/AppartementCard.jsx';
 
 function GalleryAppartement() {
   return (
     <div className="gallery">
-        <Appartement/>
-        <Appartement/>
-        <Appartement/>
-        <Appartement/>
-        <Appartement/>
-        <Appartement/>
+        <AppartementCard/>
+        <AppartementCard/>
+        <AppartementCard/>
+        <AppartementCard/>
+        <AppartementCard/>
+        <AppartementCard/>
+        
     </div>
   )
 }

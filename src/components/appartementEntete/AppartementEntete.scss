@@ -1,0 +1,79 @@
+@import "../../scss/variables.scss";
+
+.logement-entete {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+    @media screen and (width <= 768px) {
+        flex-direction: column;
+    }
+    h1 {
+        font-weight: 500;
+        margin: 0;
+    }
+    h2 {
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+    h3 {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        align-items: flex-end;
+        justify-content: center;
+        font-weight: 500;
+    }
+    .logement-tags {
+        display: flex;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        margin-bottom: 10px;
+        span {
+            background-color: $couleur-primaire;
+            color: $couleur-tertiaire;
+            padding: 2px 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+    }
+    .logement-owner-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+        @media screen and (width <= 768px) {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+        .logement-owner {
+            display: flex;
+            gap: 10px;
+            .logement-owner-badge {
+                height: 64px;
+                width: 64px;
+                border-radius: 50%;
+                background: $linear-gradient-card;
+            }
+        }
+        .owner-rate {
+            display: flex;
+            gap: 5px;
+            @media screen and (width <= 768px) {
+                align-items: center;
+            }
+            * {
+                font-size: 25px;
+            }
+            .on {
+                color: $couleur-primaire;
+            }
+            .off {
+                color: $couleur-stars-off;
+            }
+        }
+    }
+}

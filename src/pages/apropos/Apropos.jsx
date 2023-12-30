@@ -1,8 +1,18 @@
-
+import Collapse from "../../components/collapse/Collapse.jsx";
+import BannerAboutPage from "../../layout/banner/BannerAboutPage.jsx";
+import Container from "../../layout/container/Container.jsx";
 
 function Apropos() {
   return (
-    <div>Apropos</div>
+    <>
+    <Container> 
+    <BannerAboutPage/>
+    <Collapse/>
+    <Collapse/>
+    <Collapse/>
+    <Collapse/>
+    </Container>
+    </>
   )
 }
 

@@ -1,0 +1,11 @@
+@import "../../scss/variables.scss";
+
+.image-banner {
+    img {
+        border-radius: 25px;
+        height: 415px;
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+}

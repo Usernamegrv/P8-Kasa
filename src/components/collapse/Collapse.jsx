@@ -1,11 +1,11 @@
-import "./ApptDescription.scss";
+import "./Collapse.scss";
 
-function ApptDescription() {
+function Collapse() {
   return (
-    <div className="logement-description">
+    <div className="collapse-description">
     <p className="description-titre">
         <span>Description</span>
-        <i className="fa-solid fa-chevron-down"></i>
+        <i className="fa-solid fa-chevron-up"></i>
         </p>
     <p className="description-contenu">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
@@ -19,4 +19,4 @@ function ApptDescription() {
   )
 }
 
-export default ApptDescription
+export default Collapse
