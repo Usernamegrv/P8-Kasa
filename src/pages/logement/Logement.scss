@@ -10,7 +10,6 @@
         margin-bottom: 20px;
     }
     .logement-entete {
-        border: 3px solid red;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -38,6 +37,7 @@
             display: flex;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 10px;
+            margin-bottom: 10px;
             span {
                 background-color: $couleur-primaire;
                 color: $couleur-tertiaire;
@@ -61,6 +61,23 @@
                     background: $linear-gradient-card;
                 }
             }
+            .owner-rate {
+                display: flex;
+                gap: 5px;
+                * {
+                    font-size: 25px;
+                }
+                .on {
+                    color: $couleur-primaire;
+                }
+                .off {
+                    color: $couleur-stars-off;
+                }
+            }
         }
+    }
+    .conteneur-apptDescription {
+        display: flex;
+        gap: 50px;
     }
 }

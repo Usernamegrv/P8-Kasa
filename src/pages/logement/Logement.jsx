@@ -1,3 +1,4 @@
+import ApptDescription from "../../components/apptDescription/ApptDescription.jsx";
 import "./Logement.scss";
 
 function Logement() {
@@ -8,7 +9,7 @@ function Logement() {
       </div>
       <div className="logement-entete">
         <div className="logement-titre">
-          <h1>Crazy loft on canal Saint Martin</h1>
+          <h1>Cozy loft on canal Saint Martin</h1>
           <h2>Paris ile de france</h2>
           <div className="logement-tags">
             <span>Cozy</span>
@@ -25,35 +26,17 @@ function Logement() {
             <div className="logement-owner-badge"></div>
           </div>
           <div className="owner-rate">
-            <span>☆</span>
-            <span>☆</span>
-            <span>☆</span>
-            <span>☆</span>
-            <span>☆</span>
+            <span className="on">★</span>
+            <span className="on">★</span>
+            <span className="on">★</span>
+            <span className="off">★</span>
+            <span className="off">★</span>
           </div>
         </div>
       </div>
-      <div className="logement-description">
-        <p>Description</p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-          autem delectus facilis ab ut fugiat recusandae quidem, assumenda
-          veritatis temporibus, placeat libero. Accusamus corrupti at magni
-          exercitationem totam. Voluptatum minus quam cumque repellendus
-          dignissimos sed, aspernatur dicta ratione delectus! Ullam repellat
-          excepturi nulla. Magnam fuga, voluptas optio perspiciatis quasi ullam!
-        </p>
-      </div>
-      <div className="logement-description">
-        <p>Description</p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-          autem delectus facilis ab ut fugiat recusandae quidem, assumenda
-          veritatis temporibus, placeat libero. Accusamus corrupti at magni
-          exercitationem totam. Voluptatum minus quam cumque repellendus
-          dignissimos sed, aspernatur dicta ratione delectus! Ullam repellat
-          excepturi nulla. Magnam fuga, voluptas optio perspiciatis quasi ullam!
-        </p>
+      <div className="conteneur-apptDescription">
+        <ApptDescription />
+        <ApptDescription />
       </div>
     </div>
   );

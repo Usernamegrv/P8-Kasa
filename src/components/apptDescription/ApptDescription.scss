@@ -1,0 +1,28 @@
+@import "../../scss/variables.scss";
+
+.logement-description {
+    p {
+        margin: 0;
+    }
+    .description-titre {
+        background: $couleur-primaire;
+        color: $couleur-tertiaire;
+        border-radius: 5px;
+        padding: 10px;
+        position: relative;
+        top: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        i {
+            font-size: 30px;
+            cursor: pointer;
+        }
+    }
+    .description-contenu {
+        background: $couleur-secondaire;
+        padding: 10px;
+        border-radius: 0 0 5px 5px;
+    }
+}
