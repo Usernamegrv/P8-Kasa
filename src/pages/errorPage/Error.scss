@@ -1,0 +1,24 @@
+@import "../../scss/variables.scss";
+
+.error-page {
+    color: $couleur-primaire;
+    text-align: center;
+    h1 {
+        font-size: 288px;
+        margin: 0;
+        padding-top: 100px;
+    }
+    h2 {
+        font-size: 36px;
+        margin: 0;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    a {
+        color: $couleur-primaire;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}

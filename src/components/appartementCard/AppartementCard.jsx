@@ -3,10 +3,12 @@ import './AppartementCard.scss';
 import {Link} from "react-router-dom";
 
 
-function AppartementCard() {
+function AppartementCard(props) {
+  console.log("props dans appt card", props);
   return (
     <Link to="/logement" className="appartement">
-        <div className="appartement-titre">Titre de la location</div>
+      <img src={props.imageurl} alt={props.title}/>
+        <div className="appartement-titre">{props.title}</div>
         </Link>
   )
 }
