@@ -52,7 +52,7 @@
         .logement-owner {
             display: flex;
             gap: 10px;
-            .logement-owner-badge {
+            .logement-owner-badge img {
                 height: 64px;
                 width: 64px;
                 border-radius: 50%;
@@ -62,6 +62,7 @@
         .owner-rate {
             display: flex;
             gap: 5px;
+            color: $couleur-stars-off;
             @media screen and (width <= 768px) {
                 align-items: center;
             }
@@ -70,9 +71,6 @@
             }
             .on {
                 color: $couleur-primaire;
-            }
-            .off {
-                color: $couleur-stars-off;
             }
         }
     }

@@ -1,9 +1,9 @@
 import "./ImageBanner.scss";
 
-function ImageBanner() {
+function ImageBanner(props) {
   return (
     <div className="image-banner">
-      <img src="../cover-appartementCosy.jpg" alt="image de couverture" />
+      <img src={props.imageUrl} alt="image de couverture" />
     </div>
   );
 }
