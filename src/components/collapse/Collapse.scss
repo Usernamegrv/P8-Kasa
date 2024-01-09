@@ -3,6 +3,7 @@
 .collapse-description {
     margin-bottom: 10px;
     flex-basis: 50%;
+    overflow: hidden;
     p {
         margin: 0;
     }
@@ -11,12 +12,9 @@
         color: $couleur-tertiaire;
         border-radius: 5px;
         padding: 10px;
-        position: relative;
-        top: 5px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         i {
             font-size: 30px;
             cursor: pointer;
@@ -26,5 +24,28 @@
         background: $couleur-secondaire;
         padding: 10px;
         border-radius: 0 0 5px 5px;
+        animation: slide-in 0.5s ease-in-out;
+        position: relative;
+        z-index: -1;
+        top: -3px;
+
+        &.visible {
+            animation: slide-in 0.5s ease-in-out;
+        }
+        &.hidden {
+            animation: slide-out 0.5s ease-in-out;
+            display: none;
+        }
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-100%);
+    }
+}
+@keyframes slide-out {
+    to {
+        transform: translateY(-100%);
     }
 }

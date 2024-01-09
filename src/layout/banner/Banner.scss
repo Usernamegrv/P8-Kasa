@@ -11,14 +11,15 @@
         border-radius: 25px;
         object-fit: cover;
         filter: brightness(80%);
+        position: relative;
     }
     p {
         display: flex;
         justify-content: center;
         font-weight: 500;
         font-size: 48px;
-        position: relative;
-        top: -188px;
+        position: absolute;
+        top: 200px;
         width: 50%;
         color: white;
     }

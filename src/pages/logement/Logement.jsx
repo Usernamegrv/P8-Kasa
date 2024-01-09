@@ -3,7 +3,7 @@ import Collapse from "../../components/collapse/Collapse.jsx";
 import "./Logement.scss";
 import ImageBanner from "../../components/imageBanner/ImageBanner.jsx";
 import AppartementEntete from "../../components/appartementEntete/AppartementEntete.jsx";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function Logement() {
   const location = useLocation();
@@ -30,7 +30,7 @@ function Logement() {
 
   return (
     <div className="logement-page">
-      <ImageBanner imageUrl={selectedFlat.cover} />
+      <ImageBanner pictures={selectedFlat.pictures} />
       <AppartementEntete selectedFlat={selectedFlat} />
       <div className="conteneur-collapse">
         <Collapse title="Description" content={selectedFlat.description} />
