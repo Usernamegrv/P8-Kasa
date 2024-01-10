@@ -1,32 +1,51 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Collapse from "../../components/collapse/Collapse.jsx";
 import "./Logement.scss";
 import ImageBanner from "../../components/imageBanner/ImageBanner.jsx";
 import AppartementEntete from "../../components/appartementEntete/AppartementEntete.jsx";
-import { useLocation } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 
 function Logement() {
-  const location = useLocation();
-  console.log("location:", location);
-  console.log("appartement id:", location.state.appartementId);
-
+  const Params = useParams();
   const [selectedFlat, setSelectedFlat] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  useEffect(fetchAppartementData, []);
+  useEffect(() => {
+    setLoading(true);
 
-  function fetchAppartementData() {
-    fetch("db.json")
+    fetch("../db.json")
       .then((res) => res.json())
       .then((flats) => {
-        const flat = flats.find(
-          (flat) => flat.id === location.state.appartementId
-        );
+        const flat = flats.find((flat) => flat.id === Params.id);
         setSelectedFlat(flat);
-        console.log("selectedFlat:", selectedFlat);
+        setLoading(false);
       })
       .catch(console.error);
+  }, [Params.id]);
+
+  if (loading) {
+    return <div>...Loading</div>;
   }
-  if (selectedFlat == null) return <div>...Loading</div>;
+
+  if (!selectedFlat) {
+    return <Navigate to="/Error" />;
+  }
+
+  const renderContent = (isList) => {
+    if (isList) {
+      return (
+        <ul>
+          {selectedFlat.equipments.map((eq, index) => (
+            <li key={index}>{eq}</li>
+          ))}
+        </ul>
+      );
+    } else {
+      return selectedFlat.equipment.map((eq, index) => (
+        <div key={index}>{eq}</div>
+      ));
+    }
+  };
 
   return (
     <div className="logement-page">
@@ -34,12 +53,7 @@ function Logement() {
       <AppartementEntete selectedFlat={selectedFlat} />
       <div className="conteneur-collapse">
         <Collapse title="Description" content={selectedFlat.description} />
-        <Collapse
-          title="Equipements"
-          content={selectedFlat.equipments.map((eq, index) => (
-            <li key={index}>{eq}</li>
-          ))}
-        />
+        <Collapse title="Equipements" content={renderContent(true)} />
       </div>
     </div>
   );

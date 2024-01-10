@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Collapse.scss";
 
 function Collapse(props) {
@@ -9,7 +9,9 @@ function Collapse(props) {
   };
 
   const contentClass =
-    (isContentVisible ? "visible " : "hidden ") + "description-contenu ";
+    (isContentVisible ? "visible " : "hidden ") +
+    "description-contenu " +
+    (props.height ? `height-${props.height}` : "");
   const chevronClass =
     (isContentVisible ? "fa-chevron-up " : "fa-chevron-down ") + "fas";
   return (
@@ -19,7 +21,7 @@ function Collapse(props) {
         <i className={chevronClass}></i>
       </p>
 
-      <p className={contentClass}>{props.content}</p>
+      <div className={contentClass}>{props.content}</div>
     </div>
   );
 }

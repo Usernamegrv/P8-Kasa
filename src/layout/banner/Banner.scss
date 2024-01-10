@@ -13,14 +13,14 @@
         filter: brightness(80%);
         position: relative;
     }
-    p {
+    h1 {
         display: flex;
         justify-content: center;
         font-weight: 500;
         font-size: 48px;
         position: absolute;
-        top: 200px;
-        width: 50%;
+        top: 180px;
+        width: 40%;
         color: white;
     }
 }
