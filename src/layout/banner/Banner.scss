@@ -23,4 +23,16 @@
         width: 40%;
         color: white;
     }
+    @media screen and (width <= 768px) {
+        h1 {
+            width: 95%;
+            top: 120px;
+        }
+    }
+    @media screen and (width <= 480px) {
+        h1 {
+            width: 95%;
+            top: 89px;
+        }
+    }
 }

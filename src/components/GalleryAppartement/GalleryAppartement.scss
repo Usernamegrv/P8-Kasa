@@ -9,10 +9,10 @@
     justify-content: space-between;
 }
 
-@media screen and (width <= 720px) {
+@media screen and (width <= 768px) {
     .gallery {
         justify-content: center;
         background: white;
-        padding: 0;
+        padding: 5px;
     }
 }

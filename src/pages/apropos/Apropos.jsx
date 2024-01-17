@@ -28,7 +28,6 @@ function Apropos() {
             key={item.id}
             title={item.title}
             content={item.description}
-            height={item.height}
           />
         ))}
       </Container>
