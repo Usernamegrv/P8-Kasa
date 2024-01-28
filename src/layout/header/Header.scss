@@ -1,3 +1,5 @@
+@import "../../scss/variables.scss";
+
 .navbar {
     display: flex;
     gap: 35px;
@@ -7,7 +9,7 @@
 
     a {
         text-decoration: none;
-        color: #ff6060;
+        color: $footer-background;
         &:hover {
             text-decoration: underline;
         }
