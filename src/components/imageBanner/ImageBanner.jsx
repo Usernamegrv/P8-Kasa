@@ -40,9 +40,11 @@ function ImageBanner(props) {
           </button>
         </>
       )}
-      <span className="slide-counter">
-        {currentPicture + 1} / {pictures.length}
-      </span>
+      {pictures.length > 1 && (
+        <span className="slide-counter">
+          {currentPicture + 1} / {pictures.length}
+        </span>
+      )}
     </div>
   );
 }
