@@ -1,4 +1,4 @@
-name: Deploy
+name: vite-gh-pages
 
 on:
   push:
