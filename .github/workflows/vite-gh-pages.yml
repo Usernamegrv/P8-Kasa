@@ -1,6 +1,4 @@
-
-
-          name: Deploy
+name: Deploy
 
 on:
   push:
@@ -16,11 +14,13 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Install Node.js
         uses: actions/setup-node@v3
+        with:
+          node-version: "14"
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        uses: npm install
 
       - name: Build project
         run: npm run build
