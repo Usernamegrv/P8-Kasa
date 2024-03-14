@@ -2,9 +2,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./layout/header/Header.jsx";
 import "./App.scss";
 import Footer from "./layout/footer/Footer.jsx";
-import Home from "./pages/home/Home";
+import Home from "./pages/home/Home.jsx";
 import Error from "./pages/errorPage/Error.jsx";
-import Apropos from "./pages/apropos/Apropos";
+import Apropos from "./pages/apropos/Apropos.jsx";
 import Logement from "./pages/logement/Logement.jsx";
 import Container from "./layout/container/Container.jsx";
 
